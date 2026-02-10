@@ -1,0 +1,5 @@
+{
+  "name": "iOS Fortune Wheel",
+  "description": "A high-fidelity mobile-responsive fortune wheel application with iOS-inspired UI, featuring tab navigation, profile management, and a customizable spin wheel.",
+  "requestFramePermissions": []
+}
