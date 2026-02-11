@@ -45,9 +45,9 @@ export default function App() {
           },
           tabBarIcon: ({ color, size }) => {
             const map: Record<string, keyof typeof Ionicons.glyphMap> = {
-              Wheel: "sync",
-              Settings: "settings",
-              Profile: "person",
+              "Glücksrad": "sync",
+              "Einstellungen": "settings",
+              "Profil": "person",
             };
             return <Ionicons name={map[route.name] ?? "ellipse"} size={size ?? 24} color={color} />;
           },

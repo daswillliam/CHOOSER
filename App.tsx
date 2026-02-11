@@ -58,9 +58,9 @@ export default function App() {
         screenOptions={({ route }) => ({
           headerShown: false,
           tabBarIcon: ({ color, size }) => {
-            if (route.name === 'Wheel') return <Zap size={size} color={color} />;
-            if (route.name === 'Settings') return <SettingsIcon size={size} color={color} />;
-            if (route.name === 'Profile') return <User size={size} color={color} />;
+              if (route.name === 'Glücksrad') return <Zap size={size} color={color} />;
+              if (route.name === 'Einstellungen') return <SettingsIcon size={size} color={color} />;
+              if (route.name === 'Profil') return <User size={size} color={color} />;
           },
           tabBarStyle: {
             backgroundColor: isDarkMode ? '#1c1c1e' : '#ffffff',
@@ -72,13 +72,13 @@ export default function App() {
           tabBarInactiveTintColor: isDarkMode ? '#636366' : '#8e8e93',
         })}
       >
-        <Tab.Screen name="Wheel">
+        <Tab.Screen name="Glücksrad">
           {(props) => <WheelScreen {...props} isDarkMode={isDarkMode} />}
         </Tab.Screen>
-        <Tab.Screen name="Settings">
+        <Tab.Screen name="Einstellungen">
           {(props) => <SettingsScreen {...props} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />}
         </Tab.Screen>
-        <Tab.Screen name="Profile">
+        <Tab.Screen name="Profil">
           {(props) => <ProfileStack isDarkMode={isDarkMode} />}
         </Tab.Screen>
       </Tab.Navigator>

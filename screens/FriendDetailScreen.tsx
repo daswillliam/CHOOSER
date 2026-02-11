@@ -5,9 +5,9 @@ import { ChevronLeft } from 'lucide-react-native';
 import { Friend } from '../types';
 
 const FRIENDS: Friend[] = [
-  { id: '1', name: 'Alex Thompson', avatar: 'https://picsum.photos/seed/alex/300/300', bio: 'Adventurer & Foodie.', status: 'Online' },
-  { id: '2', name: 'Sarah Chen', avatar: 'https://picsum.photos/seed/sarah/300/300', bio: 'Design is life.', status: 'Away' },
-  { id: '3', name: 'Jordan Miller', avatar: 'https://picsum.photos/seed/jordan/300/300', bio: 'Always spinning.', status: 'Offline' },
+  { id: '1', name: 'Alex Thompson', avatar: 'https://picsum.photos/seed/alex/300/300', bio: 'Abenteurer & Feinschmecker.', status: 'Online' },
+  { id: '2', name: 'Sarah Chen', avatar: 'https://picsum.photos/seed/sarah/300/300', bio: 'Design ist Leben.', status: 'Abwesend' },
+  { id: '3', name: 'Jordan Miller', avatar: 'https://picsum.photos/seed/jordan/300/300', bio: 'Immer am Drehen.', status: 'Offline' },
 ];
 
 export default function FriendDetailScreen({ route, navigation, isDarkMode }: { route: any, navigation: any, isDarkMode: boolean }) {
@@ -20,11 +20,11 @@ export default function FriendDetailScreen({ route, navigation, isDarkMode }: { 
   return (
   <>
     <SafeAreaView style={{ backgroundColor: isDarkMode ? '#1c1c1e' : '#f2f2f7', flex: 0 }}>
-      <View style={styles.header}>
+        <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <ChevronLeft size={28} color="#007AFF" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Freund Profil</Text>
+        <Text style={styles.headerTitle}>Freundesprofil</Text>
         <View style={{ width: 28 }} />
       </View>
     </SafeAreaView>

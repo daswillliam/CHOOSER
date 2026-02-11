@@ -5,9 +5,9 @@ import { ChevronRight } from 'lucide-react-native';
 import { Friend } from '../types';
 
 const FRIENDS: Friend[] = [
-  { id: '1', name: 'Alex Thompson', avatar: 'https://picsum.photos/seed/alex/150/150', bio: 'Adventurer', status: 'Online' },
-  { id: '2', name: 'Sarah Chen', avatar: 'https://picsum.photos/seed/sarah/150/150', bio: 'Designer', status: 'Away' },
-  { id: '3', name: 'Jordan Miller', avatar: 'https://picsum.photos/seed/jordan/150/150', bio: 'Spinner', status: 'Offline' },
+  { id: '1', name: 'Alex Thompson', avatar: 'https://picsum.photos/seed/alex/150/150', bio: 'Abenteurer', status: 'Online' },
+  { id: '2', name: 'Sarah Chen', avatar: 'https://picsum.photos/seed/sarah/150/150', bio: 'Designer', status: 'Abwesend' },
+  { id: '3', name: 'Jordan Miller', avatar: 'https://picsum.photos/seed/jordan/150/150', bio: 'Dreher', status: 'Offline' },
 ];
 
 export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: boolean, navigation: any }) {
@@ -26,9 +26,9 @@ export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: 
           <Image source={{ uri: 'https://picsum.photos/seed/me/200/200' }} style={styles.avatar} />
           <View style={styles.profileInfo}>
             <Text style={styles.userName}>John Appleseed</Text>
-            <Text style={styles.userTitle}>Indecisive Mastermind</Text>
+            <Text style={styles.userTitle}>Meister der Unentschlossenheit</Text>
             <View style={styles.badge}>
-              <Text style={styles.badgeText}>99 SPINS TODAY</Text>
+              <Text style={styles.badgeText}>99 DREHUNGEN HEUTE</Text>
             </View>
           </View>
         </View>
@@ -37,7 +37,7 @@ export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: 
           <Text style={styles.sectionTitle}>ÜBER MICH</Text>
           <View style={styles.aboutBox}>
             <Text style={styles.aboutText}>
-              I love using this app to decide where to eat! Life is too short to worry about choices. 🍕🍣🍔
+              Ich benutze diese App gerne, um zu entscheiden, wo ich essen soll! Das Leben ist zu kurz, um sich über Entscheidungen Sorgen zu machen. 🍕🍣🍔
             </Text>
           </View>
         </View>

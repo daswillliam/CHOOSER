@@ -53,10 +53,7 @@ export default function SettingsScreen({ isDarkMode, toggleDarkMode }: { isDarkM
           <Item label="Nutzungsbedingungen" />
           <Item label="Datenschutz" isLast />
         </Section>
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>App-Version 1.0.0 (Expo)</Text>
-          <Text style={styles.footerText}>Entwickelt mit ❤️ für Entscheider</Text>
-        </View>
+
         </ScrollView>
       </SafeAreaView>
     </>

@@ -27,19 +27,19 @@ interface WheelData {
 }
 
 const FRIENDS: Friend[] = [
-  { id: '1', name: 'Alex Thompson', avatar: 'https://picsum.photos/seed/alex/150/150', bio: 'Adventurer', status: 'Online' },
-  { id: '2', name: 'Sarah Chen', avatar: 'https://picsum.photos/seed/sarah/150/150', bio: 'Designer', status: 'Away' },
-  { id: '3', name: 'Jordan Miller', avatar: 'https://picsum.photos/seed/jordan/150/150', bio: 'Spinner', status: 'Offline' },
+  { id: '1', name: 'Alex Thompson', avatar: 'https://picsum.photos/seed/alex/150/150', bio: 'Abenteurer', status: 'Online' },
+  { id: '2', name: 'Sarah Chen', avatar: 'https://picsum.photos/seed/sarah/150/150', bio: 'Designer', status: 'Abwesend' },
+  { id: '3', name: 'Jordan Miller', avatar: 'https://picsum.photos/seed/jordan/150/150', bio: 'Dreher', status: 'Offline' },
 ];
 
 const INITIAL_WHEELS: WheelData[] = [
   {
     id: 'w1',
-    name: 'Lunch',
+    name: 'Mittagessen',
     options: [
       { id: '1', label: 'Pizza', color: COLORS[0] },
       { id: '2', label: 'Sushi', color: COLORS[1] },
-      { id: '3', label: 'Burgers', color: COLORS[2] },
+      { id: '3', label: 'Burger', color: COLORS[2] },
     ],
     collaborators: [FRIENDS[0]],
   },
@@ -109,9 +109,9 @@ export default function WheelScreen({ isDarkMode }: { isDarkMode: boolean }) {
 
   const addNewWheel = () => {
     const newId = `w${Date.now()}`;
-    setWheels([...wheels, { id: newId, name: 'New Wheel', options: [], collaborators: [] }]);
+    setWheels([...wheels, { id: newId, name: 'Neues Rad', options: [], collaborators: [] }]);
     setActiveWheelId(newId);
-    setTempName('New Wheel');
+    setTempName('Neues Rad');
     setIsEditingName(true);
   };
 
@@ -191,16 +191,16 @@ export default function WheelScreen({ isDarkMode }: { isDarkMode: boolean }) {
                 onPress={spin}
                 disabled={isSpinning || activeWheel.options.length < 2}
               >
-                <Text style={styles.spinButtonText}>{isSpinning ? 'SPINNING...' : 'SPIN'}</Text>
+                <Text style={styles.spinButtonText}>{isSpinning ? 'DREHT...' : 'DREHEN'}</Text>
               </TouchableOpacity>
-              {activeWheel.options.length < 2 && <Text style={styles.hintText}>Add at least 2 options to spin!</Text>}
+              {activeWheel.options.length < 2 && <Text style={styles.hintText}>Mindestens 2 Optionen zum Drehen erforderlich!</Text>}
             </View>
 
             <View style={styles.optionsSection}>
               <View style={styles.inputRow}>
                 <TextInput
                   style={styles.optionInput}
-                  placeholder="Add option..."
+                  placeholder="Option hinzufügen..."
                   placeholderTextColor={isDarkMode ? '#636366' : '#8e8e93'}
                   value={newOptionLabel}
                   onChangeText={setNewOptionLabel}
@@ -232,10 +232,10 @@ export default function WheelScreen({ isDarkMode }: { isDarkMode: boolean }) {
           <Modal visible={showResultModal} transparent animationType="fade">
             <View style={styles.modalOverlay}>
               <View style={styles.resultCard}>
-                <Text style={styles.resultSub}>THE RESULT IS</Text>
+                <Text style={styles.resultSub}>DAS ERGEBNIS</Text>
                 <Text style={[styles.resultText, { color: result?.color }]}>{result?.label}</Text>
                 <TouchableOpacity style={styles.modalButton} onPress={() => setShowResultModal(false)}>
-                  <Text style={styles.modalButtonText}>AWESOME!</Text>
+                  <Text style={styles.modalButtonText}>SUPER!</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={[styles.modalButton, { backgroundColor: isDarkMode ? '#1c1c1e' : '#f2f2f7' }]}
@@ -244,7 +244,7 @@ export default function WheelScreen({ isDarkMode }: { isDarkMode: boolean }) {
                     setShowResultModal(false);
                   }}
                 >
-                  <Text style={[styles.modalButtonText, { color: '#ff3b30' }]}>REMOVE & CLOSE</Text>
+                  <Text style={[styles.modalButtonText, { color: '#ff3b30' }]}>ENTFERNEN & SCHLIESSEN</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -254,12 +254,12 @@ export default function WheelScreen({ isDarkMode }: { isDarkMode: boolean }) {
           <Modal visible={showInviteModal} transparent animationType="fade" onRequestClose={() => setShowInviteModal(false)}>
             <View style={styles.modalOverlay}>
               <View style={styles.resultCard}>
-                <Text style={styles.resultSub}>INVITE</Text>
+                <Text style={styles.resultSub}>Einladen</Text>
                 <Text style={{ color: isDarkMode ? 'white' : 'black', fontSize: 16, marginBottom: 20 }}>
-                  Invite UI not implemented.
+                  Nicht implementiert.
                 </Text>
                 <TouchableOpacity style={styles.modalButton} onPress={() => setShowInviteModal(false)}>
-                  <Text style={styles.modalButtonText}>CLOSE</Text>
+                  <Text style={styles.modalButtonText}>SCHLIESSEN</Text>
                 </TouchableOpacity>
               </View>
             </View>
