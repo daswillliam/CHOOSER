@@ -1,18 +1,84 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+---
 
-# Chooser App
+# CHOOSER – Fortune Wheel App
 
-This repo contains a simple React Native/Expo chooser app (fortune wheel).
+Eine mobile Glücksrad-App mit **React Native + Expo**.
+Die App läuft in **Expo Go** und benötigt **kein Backend**.
 
-## Run locally
+---
 
-**Prerequisites:** Node.js and Expo CLI (recommended)
+## Funktionen
 
-1. Install dependencies:
-   `npm install`
-2. Start the app:
-   `npm run dev` or `expo start`
+* Optionen zum Rad hinzufügen und löschen
+* Dreh-Animation mit zufälligem Ergebnis
+* Ergebnis-Popup mit Option zum Entfernen
+* Bottom-Tab Navigation (Wheel / Settings / Profile)
+* Dark-Mode Umschaltung
+* Statische Freundesliste mit Detailansicht
 
-No external AI API keys are required to run this app.
+---
+
+## Voraussetzungen
+
+* Node.js **>= 20**
+* npm
+* Expo Go App (iOS oder Android)
+
+---
+
+## Installation
+
+Repository klonen:
+
+```bash
+git clone <REPO-URL>
+cd <PROJEKT-ORDNER>
+```
+
+Abhängigkeiten installieren:
+
+```bash
+npm install
+```
+
+---
+
+## App starten
+
+Expo starten:
+
+```bash
+npx expo start
+```
+
+Dann:
+
+1. **Expo Go** auf dem Smartphone öffnen
+2. QR-Code scannen
+
+Wichtig: Smartphone und Computer müssen im **gleichen WLAN** sein.
+
+Falls es nicht verbindet:
+
+```bash
+npx expo start --tunnel
+```
+
+---
+
+## Verwendete Technologien
+
+* Expo (SDK 54)
+* React Native
+* React Navigation (Bottom Tabs + Native Stack)
+* TypeScript
+
+---
+
+## Hinweise
+
+* Kein Backend notwendig
+* Keine API-Keys erforderlich
+* Alle Daten werden lokal im State gespeichert
+
+---
