@@ -14,11 +14,14 @@ export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: 
   const styles = getStyles(isDarkMode);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Profile</Text>
-      </View>
-      <ScrollView contentContainerStyle={styles.content}>
+    <>
+      <SafeAreaView style={{ backgroundColor: isDarkMode ? '#1c1c1e' : 'white', flex: 0 }}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Profil</Text>
+        </View>
+      </SafeAreaView>
+      <SafeAreaView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.profileCard}>
           <Image source={{ uri: 'https://picsum.photos/seed/me/200/200' }} style={styles.avatar} />
           <View style={styles.profileInfo}>
@@ -31,7 +34,7 @@ export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: 
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>ABOUT ME</Text>
+          <Text style={styles.sectionTitle}>ÜBER MICH</Text>
           <View style={styles.aboutBox}>
             <Text style={styles.aboutText}>
               I love using this app to decide where to eat! Life is too short to worry about choices. 🍕🍣🍔
@@ -41,8 +44,8 @@ export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: 
 
         <View style={styles.section}>
           <View style={styles.friendsHeader}>
-            <Text style={styles.sectionTitle}>FRIENDS</Text>
-            <TouchableOpacity><Text style={styles.seeAll}>See All</Text></TouchableOpacity>
+            <Text style={styles.sectionTitle}>FREUNDE</Text>
+            <TouchableOpacity><Text style={styles.seeAll}>Alle anzeigen</Text></TouchableOpacity>
           </View>
           <View style={styles.friendsList}>
             {FRIENDS.map((f, i) => (
@@ -61,8 +64,9 @@ export default function ProfileScreen({ isDarkMode, navigation }: { isDarkMode: 
             ))}
           </View>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
 }
 

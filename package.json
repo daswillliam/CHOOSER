@@ -1,25 +1,27 @@
-
 {
   "name": "ios-fortune-wheel",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "main": "expo/AppEntry",
   "dependencies": {
-    "expo": "~52.0.0",
-    "expo-status-bar": "~2.0.0",
-    "react": "18.3.1",
-    "react-native": "0.76.0",
-    "react-native-svg": "15.8.0",
-    "@react-navigation/native": "^7.0.0",
+    "@expo/vector-icons": "^15.0.3",
     "@react-navigation/bottom-tabs": "^7.0.0",
-    "@react-navigation/stack": "^7.0.0",
-    "react-native-screens": "~4.0.0",
-    "react-native-safe-area-context": "4.12.0",
-    "lucide-react-native": "^0.460.0"
+    "@react-navigation/native": "^7.0.0",
+    "@react-navigation/native-stack": "^7.12.0",
+    "expo": "~54.0.0",
+    "expo-asset": "~12.0.0",
+    "expo-status-bar": "~3.0.0",
+    "lucide-react-native": "^0.563.0",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-gesture-handler": "~2.28.0",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-svg": "15.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@types/react": "~18.3.12",
+    "@types/react": "~19.1.10",
     "typescript": "^5.3.3"
-  },
-  "private": true
+  }
 }

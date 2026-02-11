@@ -27,7 +27,7 @@ const Wheel: React.FC<WheelProps> = ({ options, rotation, isSpinning }) => {
            </Svg>
         </View>
         <Text style={styles.emptyText}>
-          {totalOptions === 0 ? "Add options!" : "Add one more!"}
+          {totalOptions === 0 ? "Optionen hinzufügen!" : "Eine weitere Hinzufügen!"}
         </Text>
       </View>
     );

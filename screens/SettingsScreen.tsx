@@ -35,27 +35,31 @@ export default function SettingsScreen({ isDarkMode, toggleDarkMode }: { isDarkM
   );
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Settings</Text>
-      </View>
-      <ScrollView>
-        <Section title="PREFERENCES">
-          <Item label="Dark Mode" value={isDarkMode} onToggle={toggleDarkMode} />
-          <Item label="Sound Effects" value={sounds} onToggle={() => setSounds(!sounds)} />
-          <Item label="Haptic Feedback" value={haptics} onToggle={() => setHaptics(!haptics)} isLast />
+    <>
+      <SafeAreaView style={{ backgroundColor: isDarkMode ? '#1c1c1e' : 'white', flex: 0 }}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Einstellungen</Text>
+        </View>
+      </SafeAreaView>
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
+        <Section title="EINSTELLUNGEN">
+          <Item label="Dunkler Modus" value={isDarkMode} onToggle={toggleDarkMode} />
+          <Item label="Soundeffekte" value={sounds} onToggle={() => setSounds(!sounds)} />
+          <Item label="Haptisches Feedback" value={haptics} onToggle={() => setHaptics(!haptics)} isLast />
         </Section>
-        <Section title="SUPPORT">
-          <Item label="Help Center" />
-          <Item label="Terms of Service" />
-          <Item label="Privacy Policy" isLast />
+        <Section title="HILFE">
+          <Item label="Hilfezentrum" />
+          <Item label="Nutzungsbedingungen" />
+          <Item label="Datenschutz" isLast />
         </Section>
         <View style={styles.footer}>
-          <Text style={styles.footerText}>App Version 1.0.0 (Expo)</Text>
-          <Text style={styles.footerText}>Made with ❤️ for Deciders</Text>
+          <Text style={styles.footerText}>App-Version 1.0.0 (Expo)</Text>
+          <Text style={styles.footerText}>Entwickelt mit ❤️ für Entscheider</Text>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
 }
 

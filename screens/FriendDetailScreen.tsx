@@ -18,32 +18,37 @@ export default function FriendDetailScreen({ route, navigation, isDarkMode }: { 
   if (!friend) return null;
 
   return (
-    <SafeAreaView style={styles.container}>
+  <>
+    <SafeAreaView style={{ backgroundColor: isDarkMode ? '#1c1c1e' : '#f2f2f7', flex: 0 }}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <ChevronLeft size={28} color="#007AFF" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Friend Profile</Text>
+        <Text style={styles.headerTitle}>Freund Profil</Text>
         <View style={{ width: 28 }} />
       </View>
+    </SafeAreaView>
+
+    <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? '#1c1c1e' : '#f2f2f7' }}>
       <View style={styles.content}>
         <Image source={{ uri: friend.avatar }} style={styles.avatar} />
         <Text style={styles.name}>{friend.name}</Text>
         <Text style={[styles.status, { color: friend.status === 'Online' ? '#34C759' : '#8e8e93' }]}>
           {friend.status}
         </Text>
-        
+
         <View style={styles.bioCard}>
-          <Text style={styles.bioTitle}>Bio</Text>
+          <Text style={styles.bioTitle}>Biografie</Text>
           <Text style={styles.bioText}>{friend.bio}</Text>
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Send a Wheel</Text>
+          <Text style={styles.buttonText}>Rad senden</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
-  );
+  </>
+);
 }
 
 const getStyles = (isDarkMode: boolean) => StyleSheet.create({
