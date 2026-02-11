@@ -5,10 +5,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import WheelScreen from "./screens/WheelScreen";
-import SettingsScreen from "./screens/SettingsScreen";
-import ProfileScreen from "./screens/ProfileScreen";
-import FriendDetailScreen from "./screens/FriendDetailScreen";
+import WheelScreen from "../screens/WheelScreen";
+import SettingsScreen from "../screens/SettingsScreen";
+import ProfileScreen from "../screens/ProfileScreen";
+import FriendDetailScreen from "../screens/FriendDetailScreen";
 
 type ProfileStackParamList = {
   ProfileHome: undefined;

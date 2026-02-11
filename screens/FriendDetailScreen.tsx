@@ -43,7 +43,7 @@ export default function FriendDetailScreen({ route, navigation, isDarkMode }: { 
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Rad senden</Text>
+          <Text style={styles.buttonText}>Rad teilen</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
